@@ -1,0 +1,14 @@
+services:
+  importer:
+    build: .
+    container_name: nz-open-banking-actual-budget
+    env_file: .env
+    restart: unless-stopped
+    networks:
+      - importer-network
+    ports:
+      - "3000:3000" 
+
+networks:
+  importer-network:
+    driver: bridge
