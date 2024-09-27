@@ -20,15 +20,7 @@ This project aims to provides a simple solution for importing bank transactions 
    git clone <repo-url>
    cd customer-importer
    ```
-2. Create a .env file in the root of the project with the following variables:
-   ```
-   ACTUAL_SERVER_URL=http://localhost:5006
-   ACTUAL_DATA_DIR=/path/to/data
-   ACTUAL_PASSWORD=your-password
-   PAYMENTSNZ_TOKEN=your-oauth-token
-   ACCOUNT_ID=your-paymentsnz-account-id
-   RUN_INTERVAL=2h
-   ```
+2. Amend the .env Environment Variables file
 3. Build and run the Docker container using docker-compose:
    ```
    docker-compose up --build
@@ -38,10 +30,10 @@ This project aims to provides a simple solution for importing bank transactions 
 | Variable           | Description                                             |
 |--------------------|---------------------------------------------------------|
 | `ACTUAL_SERVER_URL` | URL of the Actual Budget server (e.g., `http://localhost:5006`). |
-| `ACTUAL_DATA_DIR`   | Path to the Actual Budget data directory.               |
 | `ACTUAL_PASSWORD`   | Actual Budget server password.                          |
-| `PAYMENTSNZ_TOKEN`  | OAuth token for accessing PaymentsNZ API.               |
-| `ACCOUNT_ID`        | Account ID for fetching transactions from PaymentsNZ.   |
+| `ACTUAL_BUDGET_ACCOUNT_ID`| Actual Budget account ID                          |
+| `ACTUAL_CATEGORY_ID`   | Actual Budget default category for transactions.     |
+| `BANK_API_URL`  | URL end point for accessing Bank API.               |
 | `RUN_INTERVAL`      | Time interval to run the importer (e.g., `30m`, `2h`, `1d`). |
 
 ## How It Works
