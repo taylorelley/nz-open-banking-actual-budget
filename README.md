@@ -1,5 +1,7 @@
 # Actual Budget Importer for NZ Open Banking Standard
 
+## This is completely untested and is just a quick base to start building from
+
 This project aims to provides a simple solution for importing bank transactions from the NZ bank accounts using the PaymentsNZ Account Information API standrd into an Actual Budget server. 
 
 ## Features
